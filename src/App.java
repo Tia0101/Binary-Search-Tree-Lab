@@ -78,11 +78,13 @@ import customer.CustomerBST;
                 String phone = scanner.nextLine();
                 System.out.print("Enter customer address: ");
                 String address = scanner.nextLine();
+                System.out.println("Enter customer city: ");
+                String city = scanner.nextLine();
                 System.out.print("Enter customer state: ");
                 String state = scanner.nextLine();
                 System.out.print("Enter customer zip: ");
                 String zip = scanner.nextLine();
-                customerTree.addNode(new Customer(id, firstName, lastName, phone, address, state, zip));
+                customerTree.addNode(new Customer(id, firstName, lastName, phone, address, city, state, zip));
                 System.out.println("Customer added successfully.");
             }
         }
