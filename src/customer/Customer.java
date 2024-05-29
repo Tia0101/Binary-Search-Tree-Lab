@@ -65,9 +65,9 @@ public class Customer {
     }
 
     @Override
+    // toString method
     public String toString() {
         return String.format("%nID: %d%nFirst Name: %s%nLast Name: %s%nPhone Number: %s%nStreet Address: %s%nState: %s%nZip Code: %s%n",
         id, firstName, lastName, phoneNumber, streetAddress, state, zipCode);
     }
-    // toString method
 }
