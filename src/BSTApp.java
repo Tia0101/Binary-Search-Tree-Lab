@@ -16,6 +16,9 @@ import customer.CustomerBST;
             CustomerBST customerTree = new CustomerBST();// create a new BST
             Scanner scanner = new Scanner(System.in);
             int choice = 0;
+
+            System.out.println("\nCustomer Directory Application");
+            System.out.println("-------------------------------");
             //do while loop for the menu
             do {
                 System.out.println("\n1. Add customer");

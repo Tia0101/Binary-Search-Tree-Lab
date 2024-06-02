@@ -1,3 +1,6 @@
+Customer Directory Application
+-------------------------------
+
 1. Add customer
 2. Remove customer
 3. Search customer
