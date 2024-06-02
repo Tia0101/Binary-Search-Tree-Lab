@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BSTApp",
+            "request": "launch",
+            "mainClass": "BSTApp",
+            "projectName": "Binary Search Tree Lab_39815e43"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

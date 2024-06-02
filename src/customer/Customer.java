@@ -1,7 +1,16 @@
-package customer;
+// Name: Tia Vanderyacht
+//Date:06/02/2024
+// Class: CS 145 9:30am face to face
+// Assignment: Lab 7 Binary Search Tree
+// Purpose: Object class for the customer object. This class contains the customer object and the getters and setters for the customer object.
+// Citation: GeeksforGeeks, w3schools.com,and youtube(bro code)
 
+package customer;//custom package created for the customer class
 
+// Customer class
 public class Customer {
+
+    // instance variables
     private int id;
     private String firstName;
     private String lastName;
@@ -11,6 +20,7 @@ public class Customer {
     private String state;
     private String zipCode;
 
+    //customer constructor
     public Customer(int id, String firstName, String lastName, String phoneNumber, String streetAddress, String state, String city, String zipCode) {
         this.id = id;
         this.firstName = firstName;

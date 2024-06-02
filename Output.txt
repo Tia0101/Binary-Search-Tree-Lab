@@ -1,18 +1,221 @@
-## Getting Started
+1. Add customer
+2. Remove customer
+3. Search customer
+4. Print customer directory
+5. Exit
+Please enter your choice: 1
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Enter customer ID: 5
+Enter customer first name: Sally
+Enter customer last name: Smith
+Enter customer phone: 111-111-1111
+Enter customer address: 1111 Main St
+Enter customer city: Bellingham
+Enter customer state: WA
+Enter customer zip: 98226
+Customer added successfully.
 
-## Folder Structure
+Would you like to add another customer? (yes/no): yes
 
-The workspace contains two folders by default, where:
+Enter customer ID: 9
+Enter customer first name: John
+Enter customer last name: Jones
+Enter customer phone: 222-222-2222
+Enter customer address: 2222 Skyline Dr
+Enter customer city: Bellingham
+Enter customer state: WA
+Enter customer zip: 98225
+Customer added successfully.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Would you like to add another customer? (yes/no): yes
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Enter customer ID: 1  
+Enter customer first name: Jane
+Enter customer last name: Smith
+Enter customer phone: 333-333-3333
+Enter customer address: 3333 Holly St
+Enter customer city: Bellingham
+Enter customer state: WA
+Enter customer zip: 98226
+Customer added successfully.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Would you like to add another customer? (yes/no): yes
 
-## Dependency Management
+Enter customer ID: Sara 
+Please enter an integer.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Enter customer ID: 3
+Enter customer first name: Sara
+Enter customer last name: Davis
+Enter customer phone: 555-555-5555
+Enter customer address: 5555 Woburn
+Enter customer city: Bellingham
+Enter customer state: WA
+Enter customer zip: 98226
+Customer added successfully.
+
+Would you like to add another customer? (yes/no): no
+
+1. Add customer
+2. Remove customer
+3. Search customer
+4. Print customer directory
+5. Exit
+Please enter your choice: 2    
+
+Enter the ID of the customer you want to remove: 3
+Customer removed successfully.
+
+Would you like to remove another customer? (yes/no): no
+
+1. Add customer
+2. Remove customer
+3. Search customer
+4. Print customer directory
+5. Exit
+Please enter your choice: 2     
+
+Enter the ID of the customer you want to remove: 0
+Customer with ID 0 does not exist.
+
+Would you like to remove another customer? (yes/no): no
+
+1. Add customer
+2. Remove customer
+3. Search customer
+4. Print customer directory
+5. Exit
+Please enter your choice: 3
+
+Enter customer ID: 3
+Customer with ID 3 does not exist.
+
+Would you like to search for another customer? (yes/no): yes
+
+Enter customer ID: 1
+Customer found:
+ID: 1
+First Name: Jane
+Last Name: Smith
+Phone Number: 333-333-3333
+Street Address: 3333 Holly St
+State: WA
+city: Bellingham
+Zip Code: 98226
+
+
+Would you like to search for another customer? (yes/no): no
+
+1. Add customer
+2. Remove customer
+3. Search customer
+4. Print customer directory
+5. Exit
+Please enter your choice: 4
+
+Customer directory: Please choose a look up an option: enter 1 for pre-order, 2 for in-order, 3 for post-order
+1
+Pre-order traversal:
+
+ID: 5
+First Name: Sally
+Last Name: Smith
+Phone Number: 111-111-1111
+Street Address: 1111 Main St
+State: WA
+city: Bellingham
+Zip Code: 98226
+
+ID: 1
+First Name: Jane
+Last Name: Smith
+Phone Number: 333-333-3333
+Street Address: 3333 Holly St
+State: WA
+city: Bellingham
+Zip Code: 98226
+
+ID: 9
+First Name: John
+Last Name: Jones
+Phone Number: 222-222-2222
+Street Address: 2222 Skyline Dr
+State: WA
+city: Bellingham
+Zip Code: 98225
+
+Would you like to print the customer directory again? (yes/no): yes
+
+Customer directory: Please choose a look up an option: enter 1 for pre-order, 2 for in-order, 3 for post-order
+2
+In-order traversal:
+
+ID: 1
+First Name: Jane
+Last Name: Smith
+Phone Number: 333-333-3333
+Street Address: 3333 Holly St
+State: WA
+city: Bellingham
+Zip Code: 98226
+
+ID: 5
+First Name: Sally
+Last Name: Smith
+Phone Number: 111-111-1111
+Street Address: 1111 Main St
+State: WA
+city: Bellingham
+Zip Code: 98226
+
+ID: 9
+First Name: John
+Last Name: Jones
+Phone Number: 222-222-2222
+Street Address: 2222 Skyline Dr
+State: WA
+city: Bellingham
+Zip Code: 98225
+
+Would you like to print the customer directory again? (yes/no): yes
+
+Customer directory: Please choose a look up an option: enter 1 for pre-order, 2 for in-order, 3 for post-order
+3
+Post-order traversal:
+
+ID: 1
+First Name: Jane
+Last Name: Smith
+Phone Number: 333-333-3333
+Street Address: 3333 Holly St
+State: WA
+city: Bellingham
+Zip Code: 98226
+
+ID: 9
+First Name: John
+Last Name: Jones
+Phone Number: 222-222-2222
+Street Address: 2222 Skyline Dr
+State: WA
+city: Bellingham
+Zip Code: 98225
+
+ID: 5
+First Name: Sally
+Last Name: Smith
+Phone Number: 111-111-1111
+Street Address: 1111 Main St
+State: WA
+city: Bellingham
+Zip Code: 98226
+
+Would you like to print the customer directory again? (yes/no): no
+
+1. Add customer
+2. Remove customer
+3. Search customer
+4. Print customer directory
+5. Exit
+Please enter your choice: 5
+Thank you for using the application. Goodbye!

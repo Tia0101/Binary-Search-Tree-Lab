@@ -1,5 +1,11 @@
+// Name: Tia Vanderyacht
+//Date:05/07/2024
+// Class: CS 145 9:30am face to face
+// Assignment: Lab 7 Binary Search Tree
+// Purpose: This class is the Binary Search Tree class. This class contains the methods to add, remove, search, and traverse the tree.
+// Citation: GeeksforGeeks, w3schools.com,and youtube(bro code)
 
-package customer;
+package customer;//custom package created for the customer class
 
 public class CustomerBST {
 
@@ -11,7 +17,7 @@ public class CustomerBST {
         protected Node left;
         protected Node right;
         
-        // constructor
+        //node constructor
         public Node(Customer customer) {
             this.customer = customer;
         }
@@ -23,7 +29,7 @@ public class CustomerBST {
         
     }
 
-    // helper method to add a new customer to the tree recursively
+    // helper method to add a new customer to the tree recursively and return the node
     private Node addHelper(Node current, Customer customer) {
         if (current == null) {
             return new Node(customer);
@@ -43,25 +49,25 @@ public class CustomerBST {
         root = removeHelper(root, id);
     }
 
-    // helper method to remove a customer from the tree recursively
+    // helper method to remove a customer from the tree recursively and return the node
     private Node removeHelper(Node current, int id) {
         if (current == null) {
             return null;
         }
         // compare the id of the customer to the id of the current node
         if (id == current.customer.getId()) {
-            // Node to delete found
+            // the node has no children
             if (current.left == null && current.right == null) {
                 return null;
-            } else if (current.right == null) {
-                return current.left;
-            } else if (current.left == null) {
-                return current.right;
+            } else if (current.right == null) { // the node has one child to the left
+                return current.left;//return the left child
+            } else if (current.left == null) {// the node has one child to the right
+                return current.right;//return the right child
             } else {
-                // node has two children replace the node with the smallest ID value in the right subtree
+                // the node has two children replace the node with the smallest ID value in the right subtree
                 int smallestValue = findMinID(current.right);
-                current.customer.setId(smallestValue);
-                current.right = removeHelper(current.right, smallestValue);
+                current.customer.setId(smallestValue);//set the id of the current node to the smallest value
+                current.right = removeHelper(current.right, smallestValue);//remove the node that has the smallest value
                 return current;
             }
         } 
@@ -75,7 +81,7 @@ public class CustomerBST {
         return current;
     }
     
-    // helper method to find the smallest ID value in the tree recursively
+    // helper method to find the smallest ID value in the tree recursively and return the ID value
     private int findMinID(Node root) {
         if (root.left == null) {
             return root.customer.getId();
@@ -84,12 +90,12 @@ public class CustomerBST {
         }
     }
 
-    // search for a customer in the tree
+    // search for a customer in the tree return the customer object
     public Customer search(int id) {
         return searchHelper(root, id);
     }
 
-    // helper method to search for a customer in the tree recursively
+    // helper method to search for a customer in the tree recursively and return the customer object
     private Customer searchHelper(Node current, int id) {
         if (current == null) {
             return null;
@@ -112,9 +118,7 @@ public class CustomerBST {
 
     // helper method to traverse the tree in-order recursively
     private void traverseInOrder(Node node) {
-        if (node == null) {
-            System.out.println("There currently are no customers in the directory");;
-        }
+
         //transverse left, root, right
         if (node != null) {
             traverseInOrder(node.left);
@@ -130,9 +134,6 @@ public class CustomerBST {
     
     // helper method to traverse the tree pre-order recursively
     private void traversePreOrder(Node node) {
-        if (node == null) {
-            System.out.println("There currently are no customers in the directory");;
-        }
         //transverse root, left, right
         if (node != null) {
             System.out.print(node.customer.toString());
@@ -148,9 +149,6 @@ public class CustomerBST {
 
     // helper method to traverse the tree post-order recursively
     private void traversePostOrder(Node node) {
-        if (node == null) {
-            System.out.println("There currently are no customers in the directory");;
-        }
         //transverse left, right, root
         if (node != null) {
             traversePostOrder(node.left);
@@ -160,14 +158,22 @@ public class CustomerBST {
     }
     // customerTraversalLookup method to allow the user to choose the type of traversal
     public void customerTraversalLookup(int traversalType) {
+        if (root == null) {
+            System.out.println("There currently are no customers in the directory");
+            return;
+        }
+
         switch (traversalType) {
             case 1:
+                System.out.println("Pre-order traversal:");
                 traversePreOrder();
                 break;
             case 2:
+                System.out.println("In-order traversal:");
                 traverseInOrder();
                 break;
             case 3:
+                System.out.println("Post-order traversal:");
                 traversePostOrder();
                 break;
             default:
